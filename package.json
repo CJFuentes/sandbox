@@ -1,0 +1,32 @@
+{
+  "name": "app",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@12.11.2",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "dev": "pnpm --parallel --filter @app/api --filter @app/web run dev",
+    "build": "pnpm --filter @app/web run build",
+    "start": "pnpm --parallel --filter @app/api --filter @app/web run start",
+    "db:migrate": "pnpm --filter @app/api run db:migrate",
+    "db:generate": "pnpm --filter @app/api run db:generate",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit -p tsconfig.json && pnpm -r run typecheck",
+    "test": "vitest run",
+    "e2e": "pnpm --filter @app/web run e2e"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "24.19.2",
+    "eslint": "10.12.0",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "eslint-plugin-react-refresh": "0.5.7",
+    "globals": "17.13.0",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.71.2",
+    "vitest": "5.0.4"
+  }
+}

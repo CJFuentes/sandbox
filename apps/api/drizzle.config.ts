@@ -1,0 +1,10 @@
+import { defineConfig } from 'drizzle-kit';
+import { DEFAULT_DATABASE_URL } from './src/config';
+
+// `pnpm db:generate` writes a new SQL migration to ./drizzle from the schema in src/db/schema.ts.
+export default defineConfig({
+  dialect: 'postgresql',
+  schema: './src/db/schema.ts',
+  out: './drizzle',
+  dbCredentials: { url: process.env.DATABASE_URL ?? DEFAULT_DATABASE_URL },
+});
