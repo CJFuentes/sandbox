@@ -14,6 +14,9 @@ export function Layout() {
           <Link data-testid="nav-home" to="/">
             Home
           </Link>
+          <Link data-testid="nav-notes" to="/notes">
+            Notes
+          </Link>
         </nav>
         <div className="nav-account">
           <span data-testid="nav-user">{user.email}</span>
