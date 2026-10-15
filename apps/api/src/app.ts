@@ -6,6 +6,7 @@ import { errorHandler, notFoundHandler } from './lib/errors';
 import { registerBodyParsers, registerSchemaValidators } from './lib/http';
 import { authRoutes } from './routes/auth';
 import { healthRoutes } from './routes/health';
+import { notesRoutes } from './routes/notes';
 
 declare module 'fastify' {
   interface FastifyInstance {
@@ -46,6 +47,7 @@ export async function buildApp(options: BuildAppOptions = {}): Promise<FastifyIn
 
   await app.register(healthRoutes, { prefix: '/api/v1' });
   await app.register(authRoutes, { prefix: '/api/v1' });
+  await app.register(notesRoutes, { prefix: '/api/v1' });
 
   return app;
 }

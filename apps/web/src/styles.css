@@ -78,3 +78,65 @@ button {
   padding: 24px 16px;
   color: #59636e;
 }
+
+.page-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.hint {
+  margin: -8px 0 0;
+  font-size: 0.875rem;
+  color: #59636e;
+}
+
+.note-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.note-list li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #d0d7de;
+}
+
+.note-tags {
+  font-size: 0.875rem;
+  color: #59636e;
+}
+
+.note-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+}
+
+.note-tag {
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #eef1f4;
+  font-size: 0.875rem;
+}
+
+.note-body {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+}
