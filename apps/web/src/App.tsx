@@ -3,7 +3,11 @@ import { RequireAuth } from './auth/RequireAuth';
 import { Layout } from './components/Layout';
 import { NotFound } from './components/NotFound';
 import { HomePage } from './pages/HomePage';
+import { EditNotePage } from './pages/EditNotePage';
 import { LoginPage } from './pages/LoginPage';
+import { NewNotePage } from './pages/NewNotePage';
+import { NoteDetailPage } from './pages/NoteDetailPage';
+import { NotesPage } from './pages/NotesPage';
 import { RegisterPage } from './pages/RegisterPage';
 
 /**
@@ -24,6 +28,10 @@ export function App() {
         }
       >
         <Route index element={<HomePage />} />
+        <Route path="notes" element={<NotesPage />} />
+        <Route path="notes/new" element={<NewNotePage />} />
+        <Route path="notes/:noteId" element={<NoteDetailPage />} />
+        <Route path="notes/:noteId/edit" element={<EditNotePage />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
