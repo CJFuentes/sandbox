@@ -51,6 +51,17 @@ export interface User {
   createdAt: Instant;
 }
 
+/** A personal note (issue #98). Tags are normalised, de-duplicated and sorted ascending. */
+export interface Note {
+  id: string;
+  ownerId: string;
+  title: string;
+  body: string;
+  tags: string[];
+  createdAt: Instant;
+  updatedAt: Instant;
+}
+
 export interface AuthResponse {
   token: string;
   user: User;
